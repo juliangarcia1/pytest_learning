@@ -12,3 +12,5 @@
   + Autouse
   + SetUp
   + TearDown
+    + Yield
+	+ request.addfinalizer
