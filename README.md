@@ -18,8 +18,23 @@
   
     The scope defines which part of the code the decorator is going to reach out.
   + Autouse
-  
+      
     This is a parameter specified in the decorator to indicate ?it is going to be use in the whole file/current scope?
+    
+    Next example the fixture is going to used for every function.
+    
+          @pytest.fixture
+          def print_hello(autouse=True):
+             print('Hello!')
+             yield 
+             print('Inside the TearDown')
+             
+          def test_one():
+             pass  
+             
+          def test_two():
+             pass
+       
   + SetUp
   
     The SetUp part of the test is going to be contained in the fixture decorator. All the code
@@ -34,4 +49,13 @@
           @pytest.fixture
           def print_hello():
              print('Hello!')
-	+ request.addfinalizer
+             yield 
+             print('Inside the TearDown')
+    + request.addfinalizer
+	
+          @pytest.fixture
+          def print_hello(request):
+             print('Hello!')
+             def tearDown(): 
+               print('Inside the TearDown')
+             request.addfinalizer
