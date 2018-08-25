@@ -4,8 +4,11 @@
 ## some topics of pytest:
 
 + pytest installation by pip
-+ test function
-+ test class
-+ scope
-+ basic pytest command line
-+ pytest decorator
++ Test function
++ Test class
++ Basic pytest command line
++ Pytest decorator
+  + Scope
+  + Autouse
+  + SetUp
+  + TearDown
