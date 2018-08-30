@@ -38,9 +38,10 @@
   + SetUp
   
     The SetUp part of the test is going to be contained in the fixture decorator. All the code
-    contained there is going to be executed at the beginning of the scope.
+    contained there is going to be executed at the beginning of the declared scope.
   + TearDown
-    the TearDown part of the test is going to be declare inside the same fixture, the only that 
+    
+    The TearDown part of the test is going to be declare inside the same fixture, the only that 
     we are going to use as delimiter or indicator is the yield reserved word or register a function
     using the request.addfinalizer function.
   
